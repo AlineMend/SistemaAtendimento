@@ -23,7 +23,5 @@ p# SistemaAtendimento
 
 ## Diagrama de Classe:
 
-<p aling="center">
-    <img width="460" height="300" src="SistemaAtendimento/Diagrama de Classes.png>
-</p>
+<img src = "img/Diagrama de Classes.png">
 
