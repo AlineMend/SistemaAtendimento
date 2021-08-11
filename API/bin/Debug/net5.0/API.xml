@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="M:API.Controllers.AtendimentoControllers.Get">
+            <summary>
+            Buscar os atendimentos realizados.
+            </summary>
+            <param name="Todos os AtendimentososAtendimentos">Retorna todos os atendimentos</param>
+            <response code="200">Retorna os atendimentos</response>
+            <response code="400">Caso não haja nenhum atendimento</response>
+        </member>
+        <member name="M:API.Controllers.AtendimentoControllers.GetAtendimentoAsyncById(System.Int32)">
+            <summary>
+            Buscar um atendimento pelo seu Id
+            </summary>
+            <param name="Atendimento IdId">Id do atendimento buscado</param>
+            <response code="200">Retorna o atendimento  filtrado</response>
+            <response code="400">Caso não haja atendimento  com este id</response> 
+        </member>
+        <member name="M:API.Controllers.AtendimentoControllers.GetAtendimentoAsyncByNomeCliente(System.String)">
+            <summary>
+            Buscar um atendimento pelo nome do cliente
+            </summary>
+            <param name="Nome ClienteCliente">Nome do cliente do atendimento buscado</param>
+            <response code="200">Retorna o atendimento  filtrado</response>
+            <response code="400">Caso não haja atendimento  de cliente com este nome</response> 
+        </member>
+        <member name="M:API.Controllers.AtendimentoControllers.GetAtendimentoAsyncByTecnicoNome(System.String)">
+            <summary>
+            Buscar um atendimento pelo nome do técnico
+            </summary>
+            <param name="Técnico NomeNome">Nome do técnico do atendimento buscado</param>
+            <response code="200">Retorna o atendimento  filtrado</response>
+            <response code="400">Caso não haja atendimento  de técnico com este nome</response> 
+        </member>
+        <member name="M:API.Controllers.AtendimentoControllers.GetAtendimentoAsyncByTipoDeAtendimentoTipo(System.String)">
+            <summary>
+            Buscar um atendimento pelo seu tipo
+            </summary>
+            <param name="Tipo de AtendimentodeAtendimento">Tipo do atendimento buscado</param>
+            <response code="200">Retorna o atendimento  filtrado</response>
+            <response code="400">Caso não haja atendimento  com esse tipo</response> 
+        </member>
+        <member name="M:API.Controllers.AtendimentoControllers.post(API.Models.Atendimento)">
+             <summary>
+             Adicionar um atendimento
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST /Modelo
+                 {
+                    "NomeCliente": "Maria Aparecida",
+                    "DataExecucao": "segunda-feira, 09 de agosto de 2021 1:45 PM",
+                    "Observacao": "Resolvido",
+                    "TipoDeAtendimentoTipo": "Telefone",
+                    "TecnicoNome": "Ana Couto"
+                 }
+             </remarks>
+             <param name="model">Dados do atendimento a ser inserido</param>
+             <response code="200">Caso o atendimento seja inserido com sucesso</response>
+             <response code="400">Caso já exista este atendimento </response>
+        </member>
+        <member name="M:API.Controllers.AtendimentoControllers.put(System.Int32,API.Models.Atendimento)">
+             <summary>
+             Alterar um atendimento
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST /Modelo
+                 {
+                    "NomeCliente": "Maria Aparecida",
+                    "DataExecucao": "segunda-feira, 09 de agosto de 2021 1:45 PM",
+                    "Observacao": "Resolvido",
+                    "TipoDeAtendimentoTipo": "Telefone",
+                    "TecnicoNome": "Ana Couto"
+                 }
+             </remarks>
+             /// <param name="Atendimento IdId">Id do atendimento  a ser atualizado</param>
+             <param name="model">Novos dados para atualizar o atendimento indicado</param>
+             <response code="200">Caso o atendimento seja atualizado com sucesso</response>
+             <response code="400">Caso não exista um atendimento com este Id</response>   
+        </member>
+        <member name="M:API.Controllers.GestorControllers.Get">
+            <summary>
+            Buscar o gestor.
+            </summary>
+            <param name="Todos os GestoresosGestores">Retorna  o gestor</param>
+            <response code="200">Retorna os compromissos</response>
+            <response code="400">Caso não haja nenhum compromisso</response>
+        </member>
+        <member name="M:API.Controllers.GestorControllers.put(API.Models.Gestor)">
+            <summary>
+            Alterar o gestor
+            </summary>
+            <param name="model">Novos dados para alterar o gestor</param>
+            <response code="200">Cao o compromisso seja atualizado com sucesso</response>
+            <response code="400">Caso não exista um compromisso com este Id</response>   
+        </member>
+        <member name="M:API.Controllers.TecnicoControllers.Get">
+            <summary>
+            Buscar os técnicos.
+            </summary>
+            <param name="Todos os TécnicososTécnicos">Retorna todos os técnicos</param>
+            <response code="200">Retorna os técnicos</response>
+            <response code="400">Caso não haja nenhum técnico</response>
+        </member>
+        <member name="M:API.Controllers.TecnicoControllers.GetTecnicoAsyncById(System.Int32)">
+            <summary>
+            Buscar técnico pelo seu Id
+            </summary>
+            <param name="Técnico IdId">Id do técnico buscado</param>
+            <response code="200">Retorna o técnico  filtrado</response>
+            <response code="400">Caso não haja nenhum técnico  com este id</response> 
+        </member>
+        <member name="M:API.Controllers.TecnicoControllers.GetTecnicoAsyncByNome(System.String)">
+            <summary>
+            Buscar técnico pelo seu nome
+            </summary>
+            <param name="Técnico NomeNome">Nome do técnico buscado</param>
+            <response code="200">Retorna o técnico  filtrado</response>
+            <response code="400">Caso não haja nenhum técnico  com este nome</response> 
+        </member>
+        <member name="M:API.Controllers.TecnicoControllers.post(API.Models.Tecnico)">
+             <summary>
+             Adicionar um novo técnico
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST /Modelo
+                 {
+                    "Nome": "Francisco Couto",
+                    "Senha": "asd123",
+                    "Ativo": "true"
+                 }
+             </remarks>
+             <param name="model">Dados do técnico a ser inserido</param>
+             <response code="200">Caso o técnico seja inserido com sucesso</response>
+             <response code="400">Caso já exista um técnico com o mesmo nome</response>
+        </member>
+        <member name="M:API.Controllers.TecnicoControllers.put(System.String,API.Models.Tecnico)">
+             <summary>
+             Atualizar e/ou desativar um técnico
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST /Modelo
+                 {
+                    "Nome": "Francisco Couto",
+                    "Senha": "asd123",
+                    "Ativo": "true"
+                 }
+             </remarks>
+             /// <param name="Técnico NomeNome">Nome do técnico  a ser atualizado</param>
+             <param name="model">Novos dados para atualizar o técnico indicado</param>
+             <response code="200">Caso o técnico seja atualizado com sucesso</response>
+             <response code="400">Caso não exista um técnico com este nome</response>   
+        </member>
+        <member name="M:API.Controllers.TecnicoControllers.delete(System.String)">
+            <summary>
+            Excluir um técnico
+            </summary>
+            /// <param name="Técnico NomeNome">Nome do técnico a ser excluído</param>
+            <response code="200">Caso o técnico seja excluido com sucesso</response>
+            <response code="400">Caso não exista um técnico com este nome</response>  
+        </member>
+        <member name="M:API.Controllers.TipoDeAtendimentoControllers.Get">
+            <summary>
+            Consultar os tipos de atendimentos.
+            </summary>
+            <param name="Todos os Tipos de AtendimentososTiposdeAtendimentos">Retorna todos os atendimentos</param>
+            <response code="200">Retorna os compromissosatendimentos</response>
+            <response code="400">Caso não haja nenhum atendimento</response>
+        </member>
+        <member name="M:API.Controllers.TipoDeAtendimentoControllers.GetTipoDeAtendimentoAsyncById(System.Int32)">
+            <summary>
+            Consultar o tipo de atendimento por Id
+            </summary>
+            <param name="Tipo de Atendimento IddeAtendimentoId">Id do tipo de atendimento</param>
+            <response code="200">Retorna o atendimento  filtrado</response>
+            <response code="400">Caso não haja atendimento  com este id</response> 
+        </member>
+        <member name="M:API.Controllers.TipoDeAtendimentoControllers.GetAtendimentoAsyncByTipoDeAtendimentoTipo(System.String)">
+            <summary>
+            Consultar o tipo de atendimento por Tipo
+            </summary>
+            <param name="Tipo de AtendimentodeAtendimento">Tipo do atendimento</param>
+            <response code="200">Retorna o tipo de atendimento  filtrado</response>
+            <response code="400">Caso não haja atendimento desse tipo</response> 
+        </member>
+        <member name="M:API.Controllers.TipoDeAtendimentoControllers.post(API.Models.TipoDeAtendimento)">
+             <summary>
+             Adicionar um tipo de atendimento
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST /Modelo
+                 {
+                    "Id": "1",
+                    "Tipo": "Presencial",
+                    "Ativo": "true
+                 }
+             </remarks>
+             <param name="model">Dados do tipo de atendimento a ser inserido</param>
+             <response code="200">Caso o o tipo de atendimento seja inserido com sucesso</response>
+             <response code="400">Caso já exista esse tipo de atendimento</response>
+        </member>
+        <member name="M:API.Controllers.TipoDeAtendimentoControllers.put(System.Int32,API.Models.TipoDeAtendimento)">
+             <summary>
+             Atualizar e/ou desativar um tipo de atendimento
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST /Modelo
+                 {
+                    "Id": "1",
+                    "Tipo": "Presencial",
+                    "Ativo": "true
+                 }
+             </remarks>
+             <param name="Tipo de Atendimento IddeAtendimentoId">Id do tipo de atendimento  a ser atualizado</param>
+             <param name="model">Novos dados para atualizar o tipo de atendimento indicado</param>
+             <response code="200">Cao o tipo de atendimento seja atualizado com sucesso</response>
+             <response code="400">Caso não exista um tipo de atendimento com este Id</response>   
+        </member>
+        <member name="M:API.Controllers.TipoDeAtendimentoControllers.delete(System.Int32)">
+            <summary>
+            Excluir um tipo de atendimento
+            </summary>
+            /// <param name="Tipo de Atendimento IddeAtendimentoId">Id do compromisso a ser excluído</param>
+            <response code="200">Cao o compromisso seja excluido com sucesso</response>
+            <response code="400">Caso não exista um compromisso com este Id</response>  
+        </member>
+    </members>
+</doc>
